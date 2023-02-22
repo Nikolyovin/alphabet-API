@@ -6,8 +6,15 @@ class PostService {
 
     async create(post, files) {
         const pictureLetter = fileService.savePictureLetter(files.pictureLetter) // записываем на диск и сохраняем имя в бд
-        const voiceLetter = fileService.saveVoiceLetter(files.voiceLetter) // записываем на диск и сохраняем имя в бд
-        const createPost = await Post.create({ ...post, pictureLetter, voiceLetter })
+        const voiceLetter = fileService.saveVoiceLetter(files.voiceLetter) 
+        const picture1 = fileService.savePicture1(files.picture1) 
+        const voice1 = fileService.saveVoice1(files.voice1) 
+        const picture2 = fileService.savePicture2(files.picture2) 
+        const voice2 = fileService.saveVoice2(files.voice2) 
+        const picture3 = fileService.savePicture3(files.picture3) 
+        const voice3 = fileService.saveVoice3(files.voice3) 
+
+        const createPost = await Post.create({ ...post, pictureLetter, voiceLetter, picture1, voice1, picture2, voice2, picture3, voice3 })
         return  createPost
     }
 

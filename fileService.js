@@ -14,8 +14,6 @@ class FileService {
         } catch (e){
             console.log(e)
         }
-        
-
     }
 
     saveVoiceLetter(file) {
@@ -28,8 +26,78 @@ class FileService {
         } catch (e){
             console.log(e)
         }
-        
+    }
 
+    saveVoice1(file) {
+        try {
+            const fileName = uuid.v4() + '.wav'
+            //путь на диске куда файл будем сохранять с помощью path.resolve и добавляет папку которую мы указываем параметрами
+            const filePath = path.resolve('static', fileName)
+            file.mv(filePath)
+            return fileName //возвращаем только имя
+        } catch (e){
+            console.log(e)
+        }
+    }
+
+    savePicture1(file) {
+        try {
+            const fileName = uuid.v4() + '.jpg'
+            //путь на диске куда файл будем сохранять с помощью path.resolve и добавляет папку которую мы указываем параметрами
+            const filePath = path.resolve('static', fileName)
+            file.mv(filePath)
+            return fileName //возвращаем только имя
+        } catch (e){
+            console.log(e)
+        }
+    }
+
+    saveVoice2(file) {
+        try {
+            const fileName = uuid.v4() + '.wav'
+            //путь на диске куда файл будем сохранять с помощью path.resolve и добавляет папку которую мы указываем параметрами
+            const filePath = path.resolve('static', fileName)
+            file.mv(filePath)
+            return fileName //возвращаем только имя
+        } catch (e){
+            console.log(e)
+        }
+    }
+    
+    savePicture2(file) {
+        try {
+            const fileName = uuid.v4() + '.jpg'
+            //путь на диске куда файл будем сохранять с помощью path.resolve и добавляет папку которую мы указываем параметрами
+            const filePath = path.resolve('static', fileName)
+            file.mv(filePath)
+            return fileName //возвращаем только имя
+        } catch (e){
+            console.log(e)
+        }
+    }
+
+    saveVoice3(file) {
+        try {
+            const fileName = uuid.v4() + '.wav'
+            //путь на диске куда файл будем сохранять с помощью path.resolve и добавляет папку которую мы указываем параметрами
+            const filePath = path.resolve('static', fileName)
+            file.mv(filePath)
+            return fileName //возвращаем только имя
+        } catch (e){
+            console.log(e)
+        }
+    }
+    
+    savePicture3(file) {
+        try {
+            const fileName = uuid.v4() + '.jpg'
+            //путь на диске куда файл будем сохранять с помощью path.resolve и добавляет папку которую мы указываем параметрами
+            const filePath = path.resolve('static', fileName)
+            file.mv(filePath)
+            return fileName //возвращаем только имя
+        } catch (e){
+            console.log(e)
+        }
     }
 }
 
