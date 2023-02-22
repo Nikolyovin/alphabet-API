@@ -4,9 +4,10 @@ import fileService from "./fileService.js"
 class PostService {
 //сервис работает только с базой данных; от req res не зависим
 
-    async create(post, picture) {
-        const fileName = fileService.saveFile(picture) // записываем на диск и сохраняем имя в бд
-        const createPost = await Post.create({ ...post, picture: fileName })
+    async create(post, files) {
+        const pictureLetter = fileService.savePictureLetter(files.pictureLetter) // записываем на диск и сохраняем имя в бд
+        const voiceLetter = fileService.saveVoiceLetter(files.voiceLetter) // записываем на диск и сохраняем имя в бд
+        const createPost = await Post.create({ ...post, pictureLetter, voiceLetter })
         return  createPost
     }
 

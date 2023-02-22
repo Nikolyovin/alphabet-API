@@ -8,7 +8,7 @@ class PostController {
         try {
         // req.files.picture тут лежит фото которое мы отправляем
         console.log('req.files', req.files);
-            const post = await PostService.create(req.body, req.files.picture)
+            const post = await PostService.create(req.body, req.files)
             res.json(post) 
         } catch(e) {
             res.status(500).json(e)
